@@ -1,0 +1,435 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Holiday Lodge & Conference Center</title>
+
+<script src="./scripts/jquery.js"></script>
+<script src="./scripts/jquery-ui.js"></script>
+<script src="./scripts/ui.datepicker-en.js"></script>
+<script src="https://reservations.verticalbooking.com/js/gps-localization-extern.js" charset="utf-8"></script>
+
+<link type="text/css" href="./scripts/jquery-ui.min.css" rel="stylesheet" />
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+<link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Source+Sans+Pro:300,400,600,700" rel="stylesheet">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+<!-- <link rel="stylesheet" href="./template/assets/styles/style.css"> -->
+<link rel="stylesheet" href="./style.css">
+</head>
+<body>
+	<div id="home"></div>
+	<div class="header" style="background-image: url(./images/front_pic.jpg)">
+	<div class="header--content">
+	    <h1 class="header--header">Holiday Lodge <br></h1>
+	    <h2 class="header--subheader">& Conference Center</h2>
+	    <div class="header--rule"></div>
+		<p class="header--tagline l-small-text">We are just a small drive to any out door adventure you're craving</p>
+		<a target="_blank" class="clear-button" href="https://reservations.verticalbooking.com/premium/index.html?id_albergo=26233&dc=9423&lingua_int=usa&id_stile=20021">BOOK TODAY</a>
+	</div>
+</div>	<div class="booking-bar">
+		    <form
+    action="https://reservations.verticalbooking.com/premium/index2.html" 
+    method="post" name="myform" id="myform" target="_blank" 
+    style="margin:0px; padding:0px;" 
+    onsubmit="javascript:invia_form();" 
+>
+    <input name="gg" id="gg" value="" type="hidden">
+    <input name="mm" id="mm" value="" type="hidden">
+    <input name="aa" id="aa" value="" type="hidden">
+    <input name="ggf" id="ggf" value="" type="hidden">
+    <input name="mmf" id="mmf" value="" type="hidden">
+    <input name="aaf" id="aaf" value="" type="hidden">
+
+    <!-- PARAMETERS TO CUSTOMIZE -->
+    
+        <input name="id_albergo" value="26233" type="hidden">
+        <input name="dc" value="9423" type="hidden">
+    
+    <input name="lingua_int" value="usa" type="hidden">
+    <input name="id_stile" value="20021" type="hidden">
+
+    <!-- END PARAMETERS TO CUSTOMIZE -->
+    <input name="countryCode" class="country_code" value="" type="hidden"/>
+    <input name="gps_latitude" class="gps_latitude" value=""  type="hidden"/>
+    <input name="gps_longitude" class="gps_longitude" value="" type="hidden"/>
+    <input name="headvar" value="ok" type="hidden">
+
+
+    <div id="arrival_date" class="blocco">
+    	<div class="label"><span>Check In</span> <span><i class="far fa-calendar-alt"></i></span></div>
+        <div class="tendina">
+            <input id="from" type="text" value="Arrival date" placeholder="Arrival Date">
+        </div>
+    </div>
+    <div id="departure_date" class="blocco">
+    	<div class="label"><span>Check Out</span> <span><i class="far fa-calendar-alt"></i></span></div>
+        <div class="tendina">
+            <input id="to" type="text" value="Departure date" placeholder="Departure date" >
+        </div>
+    </div>
+    <div id="rooms" class="blocco">
+    	<div class="label"><span>Rooms</span> <span>&#xfe40;</span></div>
+    	<div class="tendina">
+            <select class="select" name="tot_camere">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+            </select>
+        </div>
+    </div>
+    <div id="adults" class="blocco">
+        <div class="label"><span>Adults</span> <span>&#xfe40;</span></div>
+        <div class="tendina">
+            <select class="select" name="tot_adulti">
+                        <option value="1">1</option>
+                <option value="2" selected="selected">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+            </select>
+        </div>
+    </div>
+    <div id="children" class="blocco">
+        <div class="label"><span>Children</span> <span>&#xfe40;</span></div>
+        <div class="tendina">
+            <select class="select" name="tot_bambini" >
+                <option value="0" selected >0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+                <option value="13">13</option>
+                <option value="14">14</option>
+                <option value="15">15</option>
+                <option value="16">16</option>
+                <option value="17">17</option>
+                <option value="18">18</option>
+                <option value="19">19</option>
+                <option value="20">20</option>
+                <option value="21">21</option>
+                <option value="22">22</option>
+                <option value="23">23</option>
+                <option value="24">24</option>
+                <option value="25">25</option>
+                <option value="26">26</option>
+                <option value="27">27</option>
+                <option value="28">28</option>
+                <option value="29">29</option>
+                <option value="30">30</option>
+            </select>
+        </div>
+    </div>
+    <div id="search" class="blocco">
+        <input id="button" class="button" type="submit" value="CHECK AVAILABILITY"/>
+
+    </div>
+</form>
+<script type="text/javascript">
+    $(document).ready(function () {
+
+// aggiornamento calendari
+        $("#from").datepicker({
+            defaultDate: "+1w",
+            numberOfMonths: 1,
+            onSelect: function (selectedDate) {
+                var giorno_dopo = movePickerDate(selectedDate, 1);
+                $("#to").datepicker("option", "minDate", giorno_dopo);
+                aggiustaInizio();
+                aggiustaFine();
+            }
+        });
+
+        $("#to").datepicker({
+            defaultDate: "+1w",
+            numberOfMonths: 1,
+            onSelect: function (selectedDate) {
+                aggiustaInizio();
+                aggiustaFine();
+            }
+        });
+
+        var now = new Date();
+        var today = now.getDate() + '/' + (now.getMonth() + 1) + '/' + now.getFullYear();
+        $('#from').val(today);
+        $('#from').datepicker("option", "minDate", today);
+        $('#from').datepicker("option", "dateFormat", 'dd/mm/yy');
+
+        var tomorrow = movePickerDate(today, 1);
+        $('#to').val(tomorrow);
+        $('#to').datepicker("option", "dateFormat", 'dd/mm/yy');
+
+
+//date inizio e fine
+        aggiustaFine();
+        aggiustaInizio();
+    });
+
+
+
+    function aggiustaInizio()
+    {
+        var datai = $("#from").val();
+
+        datai = datai.split('/');
+
+        $('#gg').val(datai[0]);
+        $('#mm').val(datai[1]);
+        $('#aa').val(datai[2]);
+    }
+
+    function aggiustaFine() {
+        var dataf = $("#to").val();
+
+        dataf = dataf.split('/');
+
+        $('#ggf').val(dataf[0]);
+        $('#mmf').val(dataf[1]);
+        $('#aaf').val(dataf[2]);
+    }
+
+    function movePickerDate(selectedDate, amount) {
+        var a = selectedDate.split("/");
+        var data = new Date(parseInt(a[2], 10), (parseInt(a[1], 10) - 1), parseInt(a[0], 10), 12, 0, 0);
+        var giorno_data = AddDays(data, amount);
+
+        return giorno_data.getDate() + '/' + (giorno_data.getMonth() + 1) + '/' + giorno_data.getFullYear();
+    }
+
+
+
+    function AddDays(date, amount)
+    {
+        var tzOff = date.getTimezoneOffset() * 60 * 1000;
+
+        var t = date.getTime();
+        t += (1000 * 60 * 60 * 24) * amount;
+        var d = new Date();
+        d.setTime(t);
+        var tzOff2 = d.getTimezoneOffset() * 60 * 1000;
+
+        if (tzOff !== tzOff2)
+        {
+            var diff = tzOff2 - tzOff;
+            t += diff;
+            d.setTime(t);
+        }
+
+        return d;
+    }
+</script>
+	    </div>	<div class="menu-bar">
+    <h3>Holiday Lodge <br>        <span>& Conference Center</span>
+    </h3>
+	<div class="menu">
+		<ul>
+			<li>
+				<a href="#home" class="active" title="Home">Home</a> 
+			</li>
+			<li>
+				<a href="#about" title="About Us">About Us</a> 
+			</li>
+			<li>
+				<a href="#rooms-sec" title="Rooms">Rooms</a> 
+			</li>
+			<li>
+				<a href="#amenities" title="Amenities">Amenities</a> 
+			</li>
+			<li>
+				<a href="#gallery" title="Gallery">Gallery</a> 
+			</li>
+			<li>
+				<a href="#contact" title="Contact Us">Contact Us</a>
+			</li>
+		</ul>
+	</div>
+</div>
+<script>
+	var menuItem = document.querySelectorAll('.menu ul li a');
+
+	menuItem.forEach(function(el){
+		el.onclick = function(e){
+			
+			menuItem.forEach(function(el2){
+				el2.classList.remove('active');
+			});
+
+			el.classList.add('active');
+		}
+		
+	});
+</script>	<div class="sections">
+		<div class="about-section l-section">
+	<div class="in-page-link" id="about"></div> 
+	<h2 class="l-section-header">ABOUT US</h2>
+	<div class="about-section--container">
+		<div class="about-section--container-item about-section--container-left-item">
+			<h3 class="about-section--subheader">Welcome to the<span class="br"> Holiday Lodge & Conference Center</h3>
+			<p>
+			    Off Route 19, this unpretentious hotel is a 5-minute walk from the White Oak Rail Trail and 10 miles from the New River Gorge Bridge. Located in near the New River National Park 
+<br><br>
+Down-to-earth rooms have, tea and coffeemakers, minifridges and high-speed Internet access. Connecting rooms are available as well as a fitness center, & buffet breakfast all included in the price of your room.			</p>
+			<a target="_blank" class="button about-section--book-button" href="https://reservations.verticalbooking.com/premium/index.html?id_albergo=26233&dc=9423&lingua_int=usa&id_stile=20021">BOOK TODAY</a>
+		</div>
+		<div class="about-section--container-item about-section--container-right-item">
+			
+			<div class="about-section--offset-section">
+				<div class="about-section--image-container">
+					<img class="about-section--image" src="./images/front_pic.jpg" >
+					<div class="about-section--image-caption">
+						<h4 class="about-section--image-caption-header">Holiday Lodge & Conference Center</h4>
+						<span class="about-section--image-caption-content">We are located in one of the most exciting areas for outdoor fun.</span>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+	<script>
+		// const img = document.querySelector(".about-section--image");
+		// const bgImage = document.querySelector(".about-section--background-image");
+		// console.log("img.src", img.src);
+		// bgImage.style.backgroundImage = "url(" + img.src + ")";
+		// bgImage.style.width = img.width + "px";
+		// bgImage.style.height = img.height + "px";
+	</script>
+</div>		<div class="rooms-section l-section">
+	<div class="in-page-link" id="rooms-sec"></div>
+	<h2 class="l-section-header">ROOMS</h2>
+	<div class="rooms-section--container">
+					<div class="rooms-section--room-container">
+				<img class="rooms-section--room-image" src="./images/king.jpg" />
+				<div class="rooms-section--room-content">
+					<h3 class="rooms-section--room-content-header">King Suite</h3> 					
+					<div class="rooms-section--room-ruler"></div>
+					<p>Very spacious room with a fold-out couch and to living space chairs , large closet , with a sink , refrigerator and microwave also cable tv </p>
+				</div>
+				<div class="rooms-section--book-bar">
+										<a target="_blank" class="rooms-section--room-button button" href="https://reservations.verticalbooking.com/premium/index.html?id_albergo=26233&dc=9423&lingua_int=usa&id_stile=20021">BOOK NOW</a>
+				</div>
+			</div>
+		
+					<div class="rooms-section--room-container">
+				<img class="rooms-section--room-image" src="./images/doubles.jpg" />
+				<div class="rooms-section--room-content">
+					<h3 class="rooms-section--room-content-header">Double</h3> 					
+					<div class="rooms-section--room-ruler"></div>
+					<p>Two full size beds , spacious room with refrigerator , desk ,and cable tv </p>
+				</div>
+				<div class="rooms-section--book-bar">
+										<a target="_blank" class="rooms-section--room-button button" href="https://reservations.verticalbooking.com/premium/index.html?id_albergo=26233&dc=9423&lingua_int=usa&id_stile=20021">BOOK NOW</a>
+				</div>
+			</div>
+		
+					<div class="rooms-section--room-container">
+				<img class="rooms-section--room-image" src="./images/king.jpg" />
+				<div class="rooms-section--room-content">
+					<h3 class="rooms-section--room-content-header">King</h3> 					
+					<div class="rooms-section--room-ruler"></div>
+					<p>One king bed, step-in shower spacious room with refrigerator ,desk, and cable tv</p>
+				</div>
+				<div class="rooms-section--book-bar">
+										<a target="_blank" class="rooms-section--room-button button" href="https://reservations.verticalbooking.com/premium/index.html?id_albergo=26233&dc=9423&lingua_int=usa&id_stile=20021">BOOK NOW</a>
+				</div>
+			</div>
+		
+			</div>
+</div>		<div class="amenities-section l-section" style="background-image: url(./images/iStock_89784627_XXXLARGE.jpeg)">
+	<div class="in-page-link" id="amenities"></div> 
+	<h2 class="l-section-header l-white">AMENITIES</h2>
+	<div class="amenities-section--container l-section-container">
+		<div class="amenities-section--list-container">
+			<h3 class="amenities-section--list-header">Hotel Amenities</h3>
+			<ul class="amenities-section--list">
+									<li class="amenities-section--list-item">Air Conditioning</li>
+									<li class="amenities-section--list-item">Bar</li>
+									<li class="amenities-section--list-item">Breakfast included in all rates</li>
+									<li class="amenities-section--list-item">Business Center</li>
+									<li class="amenities-section--list-item">Fitness Facilities</li>
+									<li class="amenities-section--list-item">Free Parking</li>
+									<li class="amenities-section--list-item">Free WiFi in Room Guest</li>
+									<li class="amenities-section--list-item">Laundry Facility</li>
+									<li class="amenities-section--list-item">Indoor Pool</li>
+									<li class="amenities-section--list-item">Jacuzzi</li>
+									<li class="amenities-section--list-item">Meeting Rooms Available</li>
+									<li class="amenities-section--list-item">Restaurant</li>
+									<li class="amenities-section--list-item">Wheelchair Access</li>
+							</ul>
+		</div>
+		<div class="amenities-section--list-container">
+			<h3 class="amenities-section--list-header">In-Room Amenities</h3>
+			<ul class="amenities-section--list">
+									<li class="amenities-section--list-item">No Smoking</li>
+									<li class="amenities-section--list-item">Private Bathroom</li>
+									<li class="amenities-section--list-item">Telephone</li>
+									<li class="amenities-section--list-item">Safe Box</li>
+									<li class="amenities-section--list-item">TV</li>
+									<li class="amenities-section--list-item">Coffee/Tea Maker</li>
+									<li class="amenities-section--list-item">Iron/Board</li>
+									<li class="amenities-section--list-item">Desk</li>
+									<li class="amenities-section--list-item">Internet (WiFi)</li>
+									<li class="amenities-section--list-item">Air Conditioning</li>
+									<li class="amenities-section--list-item">Alarm Clock</li>
+							</ul>
+		</div>
+	</div>
+</div>		<div class="in-page-link" id="gallery"></div> 
+<div class="gallery-section l-section">
+	<h2 class="l-section-header">GALLERY</h2>
+	<div class="gallery-section--container">
+		<img class="gallery-section--image gallery-section--image-1" src="./images/bath.jpg">
+		<img class="gallery-section--image gallery-section--image-2" src="./images/doubles.jpg">
+		<img class="gallery-section--image gallery-section--image-3" src="./images/front_pic.jpg" />
+		<img class="gallery-section--image gallery-section--image-4" src="./images/king.jpg">
+		<img  class="gallery-section--image gallery-section--image-5" src="./images/bath.jpg">
+	</div>
+</div>		<div class="contact-section l-section" style="background-image: url(./images/architecture-buildings-city-259987.jpeg)">		
+	<div class="in-page-link" id="contact"></div> 
+	<h2 class="l-section-header l-white">CONTACT</h2>
+	<div class="contact-section--container">
+		<div class="contact-section--map" style="background-image: url(./images/map.png)"></div>
+		<div class="contact-section--info">
+			<h3 class="contact-section--content-header">Get in Touch</h3>
+			<h4 class="contact-section--content-sub-header">ADDRESS</h4>
+			Holiday Lodge & Conference Center<br>
+			340 Oyler Avenue OakHill, WV 25901			<a class="contact-section--content-link" target="_blank" href="#">Get Directions</a>
+			<h4 class="contact-section--content-sub-header">PHONE</h4>
+			<a class="contact-section--content-link" href="tel: 1-304-465-0571">1-304-465-0571</a>
+						<h4 class="contact-section--content-sub-header">EMAIL</h4>
+			<a class="contact-section--content-link" href="/cdn-cgi/l/email-protection#99b9f1f6f5f0fdf8e0f5f6fdfefcf6f8f2f1f0f5f5d9fef6f5f6fdfefcb7f7fced"><span class="__cf_email__" data-cfemail="b9d1d6d5d0ddd8c0d5d6dddedcd6d8d2d1d0d5d5f9ded6d5d6dddedc97d7dccd">[email&#160;protected]</span></a>
+		</div>
+	</div>
+</div>		<div class="footer">
+	<div class="footer--links-container">
+					<a class="footer--link" href="https://fb.me/holidaylodgehoteloakhill">
+				<i class="footer--link-icon fab fa-facebook-f"></i>
+			</a>
+											</div>
+	<div class="footer--copyright-text">
+		©Copyright 2022 Holiday Lodge & Conference Center. All rights reserved.
+	</div>
+</div>
+	</div>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script></body>
+</html>
