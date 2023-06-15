@@ -1,0 +1,622 @@
+#sections {
+  margin-top: -106px;
+  position: relative;
+}
+body, html {
+  margin: 0;
+  font-family: "Source Sans Pro";
+  color: #444;
+  line-height: 1.4em;
+}
+h2 {
+  font-size: 1.5em;
+  color: #444;
+  text-align: center;
+  margin-bottom: 2.5em;
+}
+.brown {
+  color: #5e3f3a;
+}
+.l-white {
+  color: #fff !important;
+}
+.l-header-container {
+  display: flex;
+  text-align: center;
+  color: #fff;
+  background: url("./assets/images/header-image.jpg") center/cover;
+  position: relative;
+  flex-flow: column;
+  align-items: center;
+}
+.l-header-container::before {
+  content: " ";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+}
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default {
+  color: #5e3f3a;
+}
+.ui-widget-header .ui-icon {
+  background-image: url(../js/images/ui-icons_0073ea_256x240.png);
+  filter: hue-rotate(162deg) !important;
+}
+.ui-state-focus, .ui-state-hover, .ui-widget-content .ui-state-focus, .ui-widget-content .ui-state-hover, .ui-widget-header .ui-state-focus, .ui-widget-header .ui-state-hover {
+  border: 1px solid #da483a;
+  background: #da483a url(../images/ui-bg_highlight-soft_25_0073ea_1x100.png) 50% 50% repeat-x;
+  font-weight: 700;
+  color: #fff;
+}
+.l-section {
+  padding: 0 5em 6em;
+  z-index: 2;
+  position: relative;
+  overflow: auto;
+}
+.l-section-header {
+  font-size: 1.5em;
+  color: #444;
+  text-align: center;
+  margin-bottom: 2.5em;
+  z-index: 1;
+  position: relative;
+}
+.l-container {
+  display: flex;
+}
+.l-small-text {
+  font-size: 2em !important;
+  line-height: 2em !important;
+}
+.in-page-link {
+  height: 106px;
+  z-index: 2;
+  position: relative;
+}
+.clear-button {
+  text-decoration: none;
+  color: #fff;
+  padding: 0.7em 1em;
+  border: solid 1px;
+}
+@media (max-width: 900px) {
+  .offset-text {
+    margin-right: 0 !important;
+  }
+  .social-media-links a {
+    text-decoration: none;
+    margin-right: 1.3em;
+  }
+}
+.header {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  padding: 10em 0;
+  background-position: center;
+  background-size: cover;
+}
+.header::before {
+  content: " ";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  top: 0;
+}
+.header--content {
+  z-index: 1;
+  position: relative;
+  color: #fff;
+  text-align: center;
+}
+.header--header {
+  margin: 0;
+  font-size: 2em;
+}
+.header--subheader {
+  font-weight: 100;
+  margin: 0;
+  padding: 1px 0 22px;
+  font-size: 1.5em;
+  line-height: 1.5em;
+  color: #fff !important;
+}
+.header--rule {
+  border-bottom: solid 2px #fff;
+  width: 20%;
+  margin: 0 auto;
+}
+.header--tagline {
+  font-family: "Abril Fatface";
+  font-size: 60px;
+  font-weight: 700;
+  margin: 0;
+  line-height: 1em;
+  letter-spacing: 3px;
+  padding: 0.5em 0;
+}
+.booking-bar {
+  position: relative;
+  padding: 1.5em 0 0;
+  width: 100%;
+  align-self: end;
+}
+.booking-bar::after {
+  content: " ";
+  background: rgba(69, 69, 69, 0.95);
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 0;
+  height: 100%;
+}
+.booking-bar .blocco {
+  min-width: 120px;
+  z-index: 2;
+  margin: 0 2em 1.5em 0;
+}
+.booking-bar form#myform {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.booking-bar form#myform .label {
+  display: grid;
+  grid-auto-flow: column;
+  font-family: sans-serif;
+  color: #fff;
+  justify-content: space-between;
+}
+.booking-bar form#myform .label span + span {
+  margin-left: auto;
+  position: relative;
+  top: 4px;
+}
+.booking-bar form#myform select {
+  width: 100%;
+  font-size: 12px;
+  -webkit-appearance: none;
+  -webkit-border-radius: 0;
+}
+.booking-bar form#myform input {
+  padding-bottom: 4px;
+}
+.booking-bar form#myform input.button#button {
+  border: solid 6px #da483a;
+}
+.booking-bar form#myform input, .booking-bar form#myform select {
+  border: none;
+  border-bottom: solid 2px #888;
+  background: 0 0;
+  font-size: 15px;
+  color: #AAA;
+  padding: 4px 0 2px;
+}
+@media (max-width: 900px) {
+  .booking-bar form#myform input.button#button {
+    font-size: 12px;
+    padding: 0.5em 1em;
+  }
+}
+.menu-bar {
+  display: flex;
+  background: #f2f0ef;
+  align-items: center;
+  color: #5e3f3a;
+  padding: 0 5em;
+  position: sticky;
+  top: 0;
+  z-index: 3;
+}
+.menu-bar a {
+  z-index: 3;
+}
+.menu-bar h3 {
+  margin: 0;
+  font-size: 1.75em;
+}
+.menu-bar h3 span {
+  font-weight: 100;
+  color: #5e3f3a;
+}
+.menu-bar .menu {
+  height: 100%;
+  width: 100%;
+  display: flex;
+}
+.menu-bar .menu ul {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  margin-left: auto;
+}
+.menu-bar .menu ul li {
+  list-style: none;
+  float: left;
+  height: 100%;
+  padding: 0 1em;
+}
+.menu-bar .menu a {
+  font-size: 20px;
+  height: 100%;
+  display: inline-block;
+  color: #444;
+  border-bottom: solid 4px #f2f0ef;
+  padding: 2em 0;
+  text-decoration: none;
+}
+.menu-bar .menu a.active, .menu-bar .menu a:hover {
+  cursor: pointer;
+  border-bottom: solid 4px #da483a;
+  color: #5e3f3a;
+  font-weight: 700;
+}
+.menu-bar .menu a:after {
+  display: block;
+  content: attr(title);
+  font-weight: 700;
+  height: 0;
+  overflow: hidden;
+  visibility: hidden;
+}
+@media (max-width: 768px) {
+  .menu-bar {
+    padding: 0 1em;
+  }
+  .menu-bar .menu ul li {
+    padding: 0 0.5em;
+  }
+  .menu-bar .menu a {
+    font-size: 14px;
+  }
+}
+@media (max-width: 900px) {
+  .menu-bar {
+    padding: 0 2em;
+  }
+  .menu-bar .menu a {
+    font-size: 16px;
+  }
+}
+.about-section {
+  background: #fff;
+}
+.about-section--container {
+  display: flex;
+}
+.about-section--book-button {
+  margin-top: auto;
+}
+.about-section--container-item {
+  max-width: 50%;
+}
+.about-section--container-left-item {
+  display: flex;
+  flex-flow: column;
+  align-items: flex-start;
+}
+.about-section--subheader {
+  font-family: "Abril Fatface";
+  font-size: 30px;
+  color: #5e3f3a;
+  margin-top: 0;
+  line-height: 1.3em;
+}
+.about-section--image-container {
+  display: flex;
+  flex-direction: column;
+}
+.about-section--container-right-item {
+  padding-left: 8em;
+  margin-top: 20px;
+}
+.about-section--image-caption {
+  margin-top: 1.5em;
+  text-align: right;
+}
+.about-section--image-caption-header {
+  margin: 0;
+  color: #5e3f3a;
+  font-size: 1.3em;
+  margin-bottom: 0.3em;
+}
+.about-section--image-caption-content {
+  color: #c5b9b7;
+  font-family: "Abril Fatface";
+  font-size: 1.3em;
+}
+.about-section--image {
+  width: 100%;
+  display: block;
+  position: relative;
+}
+.about-section--image-container {
+  width: 60%;
+}
+.about-section--image::before {
+  content: "";
+  background: #f2f0ef;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  position: absolute;
+  top: -20px;
+  left: 20px;
+}
+@media (max-width: 768px) {
+  .about-section--container {
+    flex-flow: column;
+  }
+  .about-section--container-item {
+    width: 100%;
+  }
+  .about-section--container-left-item {
+    margin-bottom: 3em;
+  }
+  .about-section--container-right-item {
+    padding-left: 0;
+  }
+}
+.amenities-section {
+  background: url(./../images/iStock_89784627_XXXLARGE.jpeg) center center/cover;
+  position: relative;
+  color: #fff;
+  text-align: center;
+}
+.amenities-section > * {
+  z-index: 2;
+  padding: 0;
+  position: relative;
+}
+.amenities-section--container {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 5em;
+}
+.amenities-section::after {
+  content: "";
+  background: #7e544d;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  filter: opacity(70%);
+  top: 0;
+  left: 0;
+}
+.amenities-section--list {
+  padding: 0;
+  margin: 0;
+}
+.amenities-section--list-item {
+  list-style-type: none;
+  font-size: 1.25em;
+  line-height: 1.4em;
+  color: #e7e1e2;
+}
+.amenities-section--list-header {
+  font-family: "Abril Fatface";
+  font-size: 1.8em;
+  margin: 0 0 0.6em;
+  letter-spacing: 2px;
+  line-height: 1.1em;
+}
+.contact-section {
+  position: relative;
+  background-position: center;
+  background-size: cover;
+}
+.contact-section::after {
+  content: "";
+  background: #444;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  filter: opacity(62%);
+  left: 0;
+}
+.contact-section--container {
+  display: flex;
+  flex: 1 1 0px;
+  width: 100%;
+  z-index: 1;
+  position: relative;
+}
+.contact-section--map {
+  background-position: center;
+  background-size: cover;
+  width: 50%;
+}
+.contact-section--map::after {
+  content: "";
+  background-image: url(./../images/pin@1x.png);
+  position: absolute;
+  top: 100px;
+  left: 421px;
+  width: 28px;
+  height: 44px;
+}
+.contact-section--info {
+  background: #fff;
+  width: 50%;
+  padding: 3em;
+  z-index: 2;
+  display: flex;
+  flex-flow: column;
+  align-items: flex-start;
+}
+.contact-section--content-link {
+  color: #da483a;
+  text-decoration: none;
+  font-weight: 700;
+}
+.contact-section--content-header {
+  font-family: "Abril Fatface";
+  color: #5e3f3a;
+  margin: 0 0 20px;
+  font-size: 30px;
+}
+.contact-section--content-sub-header {
+  color: #444;
+  font-size: 1.1em;
+  margin: 1em 0 0;
+}
+.contact-section .contact-grid .contact-info p {
+  margin: 0;
+  line-height: 1.5em;
+}
+@media (max-width: 768px) {
+  .contact-section-bg .contact-grid {
+    padding: 0;
+    flex-flow: column;
+  }
+  .contact-section-bg .contact-grid .contact-info {
+    width: 100%;
+    box-sizing: border-box;
+  }
+  .contact-section-bg .contact-grid .map-container {
+    min-height: 447px;
+    width: 100%;
+    position: relative;
+  }
+  .contact-section-bg .contact-grid .map-container img.map-pin {
+    top: 26%;
+    left: 51%;
+  }
+}
+.gallery-section--container {
+  display: grid;
+  grid-template: "A B C" "D B E" auto / 1fr 2fr 1fr;
+  grid-gap: 2em;
+}
+.gallery-section--image {
+  max-width: 100%;
+  min-height: 100%;
+  object-fit: cover;
+}
+.gallery-section--image-1 {
+  grid-area: A;
+}
+.gallery-section--image-2 {
+  grid-area: C;
+}
+.gallery-section--image-3 {
+  grid-area: B;
+}
+.gallery-section--image-4 {
+  grid-area: D;
+}
+.gallery-section--image-5 {
+  grid-area: E;
+}
+.rooms-section {
+  background: #e7e1e2;
+}
+.rooms-section--header {
+  color: #444;
+}
+.rooms-section--container {
+  display: flex;
+  gap: 35px;
+}
+.rooms-section--room-container {
+  width: 33%;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+}
+.rooms-section--room-image {
+  object-fit: cover;
+  width: 100%;
+  height: 375px;
+}
+.rooms-section--room-content {
+  padding: 2em;
+  text-align: center;
+}
+.rooms-section--room-content-header {
+  font-family: "Abril Fatface";
+  color: #5e3f3a;
+  font-size: 1.5em;
+}
+.rooms-section--room-ruler {
+  border-bottom: solid 1px #5e3f3a;
+  width: 10%;
+  margin: 0 auto;
+}
+.rooms-section--book-bar {
+  background: #f2f0ef;
+  padding: 1em 1.5em 0 1.5em;
+  display: flex;
+  align-items: center;
+  font-weight: 700;
+  color: #c5b9b7;
+  font-size: 1.25em;
+  flex-wrap: wrap;
+  margin-top: auto;
+}
+.rooms-section--room-button {
+  margin-left: auto;
+}
+.rooms-section--room-button, .rooms-section--room-price {
+  margin-bottom: 1em;
+}
+@media (max-width: 768px) {
+  .rooms-section .rooms-section-flex flex-flow:column .room-container {
+    margin-bottom: 7%;
+    margin-right: 0;
+    width: 100%;
+  }
+}
+.footer {
+  padding: 2em;
+  background: #2b2c42;
+  color: #fff;
+}
+.footer--links-container {
+  justify-content: center;
+  display: flex;
+}
+.footer--link {
+  text-decoration: none;
+}
+.footer--link:not(:last-of-type) {
+  margin-right: 20px;
+}
+.footer--link-icon {
+  font-size: 1.1em;
+  background: #fff;
+  padding: 0.5em;
+  border-radius: 50%;
+  color: #2b2c42;
+  min-width: 1.3em;
+  height: 1.3em;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+}
+.footer--copyright-text {
+  text-align: center;
+  margin-top: 20px;
+}
+.button {
+  background: #da483a !important;
+  text-decoration: none;
+  border: none;
+  background-color: #da483a;
+  font-size: 16px !important;
+  padding: 0.5rem 1.5rem !important;
+  color: #fff !important;
+  line-height: 1.4em;
+  font-weight: 700;
+}
+.button:hover {
+  cursor: pointer;
+}
+.contact-section--map::after {
+  display: none;
+}
